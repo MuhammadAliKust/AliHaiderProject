@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,33 +14,58 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.green,
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: Text(
+          title: const Text(
             "First App",
             style: TextStyle(
                 color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          leading: Icon(
+          leading: const Icon(
             Icons.arrow_back,
             color: Colors.white,
           ),
           actions: [
-            Icon(Icons.notifications),
-            Icon(Icons.shopping_cart),
-            Icon(Icons.person),
+            const Icon(Icons.notifications),
+            const Icon(Icons.shopping_cart),
+            const Icon(Icons.person),
           ],
         ),
-        body: Center(
-          child: Text(
-            "This is our first class",
-            style: TextStyle(
-                fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
+        body: SingleChildScrollView(
+          child: const Column(
+            children: [
+              Text(
+                "First Text",
+                style: TextStyle(fontSize: 30),
+              ),
+              SizedBox(
+                height: 230,
+              ),
+              Text(
+                "Second Text",
+                style: TextStyle(fontSize: 30),
+              ),
+              SizedBox(
+                height: 230,
+              ),
+              Text(
+                "Second Text",
+                style: TextStyle(fontSize: 30),
+              ),
+              SizedBox(
+                height: 230,
+              ),
+              Text(
+                "Second Text",
+                style: TextStyle(fontSize: 30),
+              ),
+              // Text("Third Text",style: TextStyle(fontSize: 30),),
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.blue,
           onPressed: () {},
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Colors.black,
           ),
