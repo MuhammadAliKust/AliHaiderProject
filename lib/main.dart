@@ -1,3 +1,4 @@
+import 'package:ali_haider_project/list_view_demo.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginView()
+      home: ListViewDemo()
     );
   }
 }

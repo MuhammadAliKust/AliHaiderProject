@@ -11,19 +11,19 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios),
+        leading: const Icon(Icons.arrow_back_ios),
         actions: [
-          Icon(Icons.notifications),
-          Icon(Icons.logout),
+          const Icon(Icons.notifications),
+          const Icon(Icons.logout),
         ],
       ),
       body: Column(
         children: [
           TextField(
             controller: emailController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text("Email"),
                 hintText: 'test@gmail.com',
                 prefixIcon: Icon(Icons.email),
@@ -33,7 +33,7 @@ class LoginView extends StatelessWidget {
           ),
           TextField(
             controller: pwdController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 label: Text("Password"),
                 hintText: 'Password must be 6 or more characters.',
                 prefixIcon: Icon(Icons.lock),
@@ -41,33 +41,33 @@ class LoginView extends StatelessWidget {
             keyboardType: TextInputType.emailAddress,
             obscureText: true,
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           ElevatedButton(
               onPressed: () {
                 if (emailController.text.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Email cannot be empty.")));
+                      const SnackBar(content: Text("Email cannot be empty.")));
                   return;
                 }
                 if (!emailController.text.isEmail) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Kindly enter valid email")));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Kindly enter valid email")));
                   return;
                 }
                 if (pwdController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Password cannot be empty.")));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Password cannot be empty.")));
                   return;
                 }
                 if (pwdController.text.length < 6) {
-                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("Password must be 6 or more characters.")));
                   return;
                 }
               },
-              child: Text("Login"))
+              child: const Text("Login"))
         ],
       ),
     );
