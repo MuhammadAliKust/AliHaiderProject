@@ -23,9 +23,9 @@ class _MultiSelectionListViewDemoState
             itemBuilder: (context, i) {
               return ListTile(
                 onTap: () {
-                  if(selectedIndex.contains(i)){
+                  if (selectedIndex.contains(i)) {
                     selectedIndex.remove(i);
-                  }else{
+                  } else {
                     selectedIndex.add(i);
                   }
 
