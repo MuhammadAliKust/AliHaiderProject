@@ -1,4 +1,5 @@
 import 'package:ali_haider_project/list_view_demo.dart';
+import 'package:ali_haider_project/single_selection_view.dart';
 import 'package:flutter/material.dart';
 
 import 'login.dart';
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListViewDemo()
+      home: SingleSelectionListViewDemo()
     );
   }
 }
