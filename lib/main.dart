@@ -1,4 +1,5 @@
 import 'package:ali_haider_project/dynamic_list_view_demo.dart';
+import 'package:ali_haider_project/gridview_demo.dart';
 import 'package:ali_haider_project/list_view_demo.dart';
 import 'package:ali_haider_project/multi_selection_view.dart';
 import 'package:ali_haider_project/page_view.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PageViewDemo()
+      home: GridviewDemo()
     );
   }
 }
