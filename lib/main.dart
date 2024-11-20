@@ -1,3 +1,4 @@
+import 'package:ali_haider_project/bottom_bar.dart';
 import 'package:ali_haider_project/dynamic_list_view_demo.dart';
 import 'package:ali_haider_project/gridview_demo.dart';
 import 'package:ali_haider_project/list_view_demo.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: GridviewDemo()
+      home: BottomBarView()
     );
   }
 }
