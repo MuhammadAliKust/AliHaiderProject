@@ -6,14 +6,19 @@ import 'package:ali_haider_project/gridview_demo.dart';
 import 'package:ali_haider_project/list_view_demo.dart';
 import 'package:ali_haider_project/multi_selection_view.dart';
 import 'package:ali_haider_project/page_view.dart';
+import 'package:ali_haider_project/providers/user_provider.dart';
+import 'package:ali_haider_project/screen_a.dart';
 import 'package:ali_haider_project/single_selection_view.dart';
 import 'package:ali_haider_project/tabbar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (context) => UserProvider()),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -21,8 +26,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BottomSheetDemo()
-    );
+    return MaterialApp(home: ScreenAView());
   }
 }
