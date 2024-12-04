@@ -38,6 +38,7 @@ dependencies:
   string_validator: ^1.1.0
   smooth_page_indicator: ^1.2.0+3
   provider: ^6.1.2
+  google_maps_flutter: ^2.10.0
 
 dev_dependencies:
   flutter_test:
